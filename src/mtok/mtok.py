@@ -58,7 +58,7 @@ def get_all_tokens_fr_private_repo(gtok_fp , github_repo , branch , fn) :
     rsp = requests.get(url)
     return rsp.json()
 
-def get_token(key_in_all_tokens ,
+def get_token(key_in_all_tokens = None ,
               github_usr = 'imahdimir' ,
               github_repo = 'tok' ,
               branch = 'main' ,
@@ -74,6 +74,8 @@ def get_token(key_in_all_tokens ,
                                 gtok_fn)
     if gtok_fp is None :
         return input('Enter token:')
+    if (key_in_all_tokens is None) or (key_in_all_tokens == github_usr) :
+        return get_val_by_key_fr_json_file(gtok_fp).val
     atoks = get_all_tokens_fr_private_repo(gtok_fp ,
                                            all_tokens_repo ,
                                            all_tokens_branch ,
