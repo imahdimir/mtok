@@ -1,5 +1,1 @@
-"""
-
-    """
-
-from .mtok import *
+from .mtok import get_token

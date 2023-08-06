@@ -6,7 +6,7 @@ build-backend = "hatchling.build"
 name = "mtok"
 version = "0.2.0"
 authors = [{ name = "Mahdi Mir", email = "imahdimir@gmail.com" }]
-description = "Gets the tokens"
+description = "Gets the token from the private tokens repository."
 readme = "README.md"
 license = { file = "LICENSE" }
 dependencies = [
