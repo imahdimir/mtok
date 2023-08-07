@@ -12,6 +12,7 @@ class Const :
     ld = {
             'mac'          : '/Users/mahdi/Dropbox/0-Arch/' ,
             'teias-ubuntu' : '/home/mahdi/Downloads/' ,
+            'datalore'     : '/data/workspace_files/.private/.gt.json'
             }
 
 k = Const()
