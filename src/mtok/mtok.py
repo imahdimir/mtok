@@ -87,18 +87,18 @@ def get_token(key_in_all_tokens = None) -> str :
     """ Gets the token/value by a key from the private tokens repo """
 
     # find the local GitHub token file
-    gtfp = ret_local_github_token_filepath()
+    fp = ret_local_github_token_filepath()
 
     # If no token file is found, ask for the token itself
-    if gtfp is None :
+    if fp is None :
         return input('Enter GitHub Token:')
 
     # If the key is None, return the GitHub token of the default user (first)
-    if key_in_all_tokens is None :
-        return ret_val_by_key_fr_json_file(gtfp).val
+    if key_in_all_tokens is None or key_in_all_tokens == 'imahdimir' :
+        return ret_val_by_key_fr_json_file(fp).val
 
     # Get all tokens from the private tokens repo
-    all_toks = get_all_tokens_fr_tokens_repo(gtfp)
+    all_toks = get_all_tokens_fr_tokens_repo(fp)
 
     # get the value of the key from the private tokens repo
     wanted_tok = all_toks[key_in_all_tokens]
