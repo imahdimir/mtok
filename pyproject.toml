@@ -7,6 +7,7 @@ name = "mtok"
 version = "3.0.0"
 authors = [{ name = "Mahdi Mir", email = "imahdimir@gmail.com" }]
 description = "Gets the token from the private tokens repository."
+long_description = ""
 dependencies = [
     "requests",
 ]
