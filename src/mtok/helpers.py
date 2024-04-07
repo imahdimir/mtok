@@ -1,11 +1,11 @@
 from pathlib import Path
 
 import requests
+from os import environ
 
 class Const :
-    # local GitHub token absolute filepath ~/.gt.json
-    lg = '.gt'
-    lg = Path(lg)
+    # local GitHub token absolute filepath $HOME/.gt.json, I assume it is in the home directory
+    lg = Path(environ['HOME']) / '.gt'
     # GitHub username
     gu = 'imahdimir'
 
