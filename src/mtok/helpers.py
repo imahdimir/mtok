@@ -1,7 +1,7 @@
+from os import environ
 from pathlib import Path
 
 import requests
-from os import environ
 
 class Const :
     # local GitHub token absolute filepath $HOME/.gt.json, I assume it is in the home directory
@@ -25,7 +25,11 @@ def get_all_tokens_fr_tokens_repo() -> dict :
     fn = 'main.json'
     url = ret_github_url_for_private_access_to_file(tok , trg_repo , br , fn)
 
-    r = requests.get(url)
+    _hdr = {
+            'User-Agent' : 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36'
+            }
+
+    r = requests.get(url , headers = _hdr)
     j = r.json()
 
     return j

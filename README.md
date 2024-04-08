@@ -1,1 +1,1 @@
-Gets Token by Key
+Gets Value by Key
