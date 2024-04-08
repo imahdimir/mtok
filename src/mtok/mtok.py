@@ -1,6 +1,6 @@
-from mtok.helpers import c
-from mtok.helpers import get_all_tokens_fr_tokens_repo
-from mtok.helpers import get_gt
+from .helpers import c
+from .helpers import get_all_tokens_fr_tokens_repo
+from .helpers import get_gt
 
 def get_token(key = None) :
     """ Gets the token by a key from the private tokens repo on my GitHub """
