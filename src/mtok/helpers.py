@@ -26,10 +26,12 @@ def get_all_tokens_fr_tokens_repo() -> dict :
     fn = 'main.json'
     url = ret_github_url_for_private_access_to_file(tok , trg_repo , br , fn)
 
-    r = requests.get(url)
+    _hdr = {
+            'Accept' : 'application/vnd.github.v3+json'
+            }
+    r = requests.get(url , headers = _hdr)
     print(r.status_code)
-    print(r.text)
-    j = json.loads(r.text)
+    j = r.json()
 
     return j
 
