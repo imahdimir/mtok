@@ -27,6 +27,8 @@ def get_all_tokens_fr_tokens_repo() -> dict :
     url = ret_github_url_for_private_access_to_file(tok , trg_repo , br , fn)
 
     r = requests.get(url)
+    print(r.status_code)
+    print(r.text)
     j = json.loads(r.text)
 
     return j
