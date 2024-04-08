@@ -29,6 +29,7 @@ def get_all_tokens_fr_tokens_repo() -> dict :
     _hdr = {
             'Accept' : 'application/vnd.github.v3+json'
             }
+    print(url)
     r = requests.get(url , headers = _hdr)
     print(r.status_code)
     j = r.json()
