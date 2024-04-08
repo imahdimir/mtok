@@ -31,5 +31,5 @@ def get_all_tokens_fr_tokens_repo() -> dict :
 
     return j
 
-def ret_github_url_for_private_access_to_file(tok , trg_repo , brnch , fn) :
-    return f'https://{c.gu}:{tok}@raw.githubusercontent.com/{c.gu}/{trg_repo}/{brnch}/{fn}'
+def ret_github_url_for_private_access_to_file(gt , trg_repo , brnch , fn) :
+    return f'https://{c.gu}:{gt}@raw.githubusercontent.com/{c.gu}/{trg_repo}/{brnch}/{fn}'
