@@ -14,7 +14,7 @@ c = Const()
 
 def get_gt() :
     with open(c.lg , 'r') as fi :
-        gt = json.load(fi)['gt']
+        gt = json.load(fi)[c.gu]
     return gt
 
 def get_all_tokens_fr_tokens_repo() -> dict :
