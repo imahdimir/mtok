@@ -5,21 +5,22 @@ from pathlib import Path
 import requests
 
 class Const :
-    # local GitHub token absolute filepath $HOME/.gt.json, I assume it is in the home directory
-    lg = Path(environ['HOME']) / '.gt.json'
+    # local GitHub token absolute filepath $HOME/.g.json, I assume it is in the home directory
+    lg = Path(environ['HOME']) / '.g.json'
     # GitHub username
     gu = 'imahdimir'
+    g = 'g'
 
 c = Const()
 
-def get_gt() :
+def get_g() :
     with open(c.lg , 'r') as fi :
-        gt = json.load(fi)[c.gu]
+        gt = json.load(fi)[c.g]
     return gt
 
 def get_all_tokens_fr_tokens_repo() -> dict :
     """ Gets all tokens from the private tokens repo """
-    gt = get_gt()
+    gt = get_g()
 
     trg_repo = 'tokens'
     br = 'main'
