@@ -1,4 +1,5 @@
 venv
+.idea
 
 # General
 .DS_Store
